@@ -1,0 +1,13 @@
+@font-face {
+    font-family: "Helvetica";
+    src: url(WDH1_Project_T012\assets\Helvetica.ttf) format(truetype);
+}
+
+:root {
+    --font-family : "Helvetica", sans-serif;
+    --bg-color : #E8EDF2;
+    --text-color : antiquewhite;
+    --text-color-2 : #2C3947;
+    --sec-color : #2C3947;
+    --tert-color : #547A95;
+}

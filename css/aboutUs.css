@@ -1,0 +1,31 @@
+@import './variables.css';
+
+html, body{
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: background-color 0.3s, color 0.3s;
+    font-family: var(--font-family);
+    margin: 0;
+    padding: 0;
+}
+.story, .map{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+    color: var(--sec-color);
+    padding:0 6vw 0 6vw;
+    border-radius: 4rem 4rem 0 0;
+    font-size: 1.2rem;
+}
+.map{
+    background-color: var(--tert-color);
+}
+iframe{
+    padding: 2rem;
+    height: 80vh;
+}
