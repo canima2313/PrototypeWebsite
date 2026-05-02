@@ -36,13 +36,36 @@
     </section>
     <section id="carousel">
         <h1>Visit Us</h1>
-        <!-- <div class="carousel">
-            <div class="track">
-                <img class="active" src="./assets/Screenshot 2026-04-10 225226.png" alt="">
-                <img class="" src="./assets/Screenshot 2026-04-10 225226.png" alt="">
-                <img class="" src="./assets/Screenshot 2026-04-10 225226.png" alt="">
+        <div class="carousel-container">
+            <div class="carousel">
+                <div class="track">
+                    <div class="slide active" data-index = "0">
+                        <img src="./assets/Screenshot 2026-04-10 225226.png" alt="">
+                    </div>
+                    <div class="slide" data-index = "1">
+                        <img src="./assets/Screenshot 2026-04-10 225226.png" alt="">
+                    </div>
+                    <div class="slide" data-index = "2">
+                        <img src="./assets/Screenshot 2026-04-10 225226.png" alt="">
+                    </div>
+                    <div class="slide" data-index = "3">
+                        <img src="./assets/Screenshot 2026-04-10 225226.png" alt="">
+                    </div>
+                    <div class="slide" data-index = "4">
+                        <img src="./assets/Screenshot 2026-04-10 225226.png" alt="">
+                    </div>
+                </div>
+                <button class="btn next" onclick="next()">></button>
+                <button class="btn prev" onclick="prev()"><</button>
             </div>
-        </div> -->
+            <div class="dots" id="dots">
+                <span class="dot" data-index = "0"></span>
+                <span class="dot" data-index = "1"></span>
+                <span class="dot" data-index = "2"></span>
+                <span class="dot" data-index = "3"></span>
+                <span class="dot" data-index = "4"></span>
+            </div>
+        </div>
     </section>
 
     <script src="./javascript/components.js"></script>
@@ -50,5 +73,8 @@
         renderNavbar();
     </script>
     <script src="./javascript/home.js"></script>
+    <script>
+        setActive();
+    </script>
 </body>
 </html>

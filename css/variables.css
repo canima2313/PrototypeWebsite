@@ -10,4 +10,7 @@
     --text-color-2 : #2C3947;
     --sec-color : #2C3947;
     --tert-color : #547A95;
+
+    --section-padding: 5rem 8vw;
+    --section-radius: 4rem 4rem 0 0;
 }

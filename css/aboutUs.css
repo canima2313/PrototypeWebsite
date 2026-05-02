@@ -1,6 +1,6 @@
 @import './variables.css';
 
-html, body{
+html, body {
     overflow-x: hidden;
     display: flex;
     flex-direction: column;
@@ -12,20 +12,49 @@ html, body{
     margin: 0;
     padding: 0;
 }
-.story, .map{
+
+h1 {
+    font-size: clamp(1.6rem, 4vw, 5rem);
+    margin: 0 0 0.5rem 0;
+}
+
+.story, .map {
     display: flex;
     flex-direction: column;
     justify-content: center;
     height: 100vh;
     color: var(--sec-color);
-    padding:0 6vw 0 6vw;
-    border-radius: 4rem 4rem 0 0;
-    font-size: 1.2rem;
+    padding: var(--section-padding);
+    border-radius: var(--section-radius);
+    font-size: clamp(0.95rem, 1.2vw, 1.4rem);
+    gap: 1.25rem;
+    box-sizing: border-box;
 }
-.map{
+
+.map {
     background-color: var(--tert-color);
 }
-iframe{
-    padding: 2rem;
-    height: 80vh;
+
+iframe {
+    width: 100%;
+    height: 70vh;
+    padding: 1.5rem;
+    box-sizing: border-box;
+}
+
+@media (max-width: 600px) {
+    h1 {
+        font-size: 1.75rem;
+    }
+    .story, .map {
+        padding: 3rem 1.5rem;
+        border-radius: 1.25rem 1.25rem 0 0;
+        font-size: 0.95rem;
+        gap: 1rem;
+        height: 80vh;
+    }
+    iframe {
+        height: 45vh;
+        padding: 0.5rem;
+    }
 }

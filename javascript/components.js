@@ -39,13 +39,17 @@ function renderNavbar(){
 function renderFooter(){
     document.getElementById('footer').innerHTML = `
         <div class="footer-container">
-            <h3>Never stop selling</h3>
-            <p>081212345678</p>
-            <a>mOGuSupport@gmail.com</a>
-            <div class="logos">
-                <img src="" alt="">
-                <img src="" alt="">
-                <img src="" alt="">
+            <h3>Never Stop Selling</h3>
+            <div class="wrap">
+                <div class="text">
+                    <p>081212345678</p>
+                    <a>mOGuSupport@gmail.com</a>
+                </div>
+                <div class="logos">
+                    <a href="https://www.instagram.com/ikann.daratt/"><img src="./assets/Instagram-logo-webp-small-size.webp" alt="instagram"></a>
+                    <a href="https://www.linkedin.com/in/nathan-jeremy-alexander-b69b78385/"><img src="./assets/LinkedIn_icon.svg.webp" alt="linkedIn"></a>
+                    <a href="https://letterboxd.com/doodoobirdman/diary/"><img src="./assets/Adobe_Illustrator_CC_icon.svg.png" alt="letterboxd"></a>
+                </div>
             </div>
         </div>
     `;

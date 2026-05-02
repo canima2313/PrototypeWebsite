@@ -13,16 +13,19 @@
     <section class="user-form">
         <h1>Create an Account</h1>
         <form id="regist">
-        <div class="container">a</div>
-        <div class="inputs">
-            <input id="name" type="text" placeholder="Full name">
-            <input id="email" type="text" placeholder="YourEmail@example.com">
-            <input id="age" type="text" placeholder="Your age">
-            <input id="pass" type="text" placeholder="Password">
-            <input id="conf" type="text" placeholder="Confirm password">
-            <button type="submit">Create Account</button>
-        </div>
-    </form> 
+            <div class="container">
+                <img src="" alt="preview" id="preview" style="display:none; width:200px; margin-top:10px;">
+                <input type="file" accept="image/*" onchange="previewImg(event)">
+            </div>
+            <div class="inputs">
+                <input id="name" type="text" placeholder="Full name">
+                <input id="email"type="text" placeholder="YourEmail@example.com">
+                <input id="age"  type="text" placeholder="Your age">
+                <input id="pass" type="text" placeholder="Password">
+                <input id="conf" type="text" placeholder="Confirm password">
+                <button type="submit">Create Account</button>
+            </div>
+        </form> 
     </section>
 
     <footer id="footer"></footer>

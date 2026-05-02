@@ -31,12 +31,23 @@ form{
 }
 form .container{
     width: 50%; 
+    display: flex;
+}
+.container input{
+    margin: 0;
+    width: 90%;
+    height: 83%;
+    border: 2px dotted var(--text-color);
+    border-radius: 2rem;
 }
 form .inputs{
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 50%;
+}
+form img{
+    border-radius: 2rem;
 }
 form input{
     margin: 0.5rem;
