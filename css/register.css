@@ -20,36 +20,72 @@ html, body{
     font-size: 2rem;
 }
 form{
+    color: var(--text-color);
     display: flex;
+    justify-content: center;
     background-color: var(--sec-color);
     padding: 5vw;
     font-weight: bold;
     font-size: 1.5rem;
-    height: 50vh;
+    max-height: 55vh;
     border-radius: 2rem;
     box-shadow: 2px 2px 10px 0;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 form .container{
     width: 50%; 
     display: flex;
 }
-.container input{
+.img-container input{
+    display: none;
+}
+.img-container label{
+    cursor: pointer;
+    margin: 4vh;
+    background-color: var(--tert-color);
+    padding: 1.5vh;
+    border-radius: 2vw;
+    transition: 0.4s ease;
+}
+.img-container label:hover{
+    scale: 1.1;
+}
+.img-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: end;
     margin: 0;
     width: 90%;
-    height: 83%;
+    height: 95%;
     border: 2px dotted var(--text-color);
     border-radius: 2rem;
+}
+.img-container img{
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 50%;
 }
 form .inputs{
     display: flex;
     flex-direction: column;
-    align-items: center;
+    margin-left: 2vw;
     width: 50%;
 }
-form img{
-    border-radius: 2rem;
+form p{
+    font-size: 1vw;
+    font-weight: normal;
+    color: red;
+    margin: 0 1rem;
+    text-align: left;
 }
-form input{
+form .text{
     margin: 0.5rem;
     font-size: 1.2rem;
     padding: 1.8rem;
@@ -66,11 +102,23 @@ form button{
     color: var(--text-color);
     background-color: var(--tert-color);
     margin: 0.5rem;
-    height: 8rem;
+    min-height: 3rem;
     width: 88%;
     border-radius: 1.2rem;
     transition: scale 0.3s ease;
 }
 form button:hover{
     scale: 1.1;
+}
+.cb{
+    display: flex;
+    margin: 1vh 2vw 1vh;
+    font-size: 1.1vw;
+}
+.cb input{
+    width: 1vw;
+    margin-right: 1vw;
+}
+section a{
+    color: var(--tert-color);
 }

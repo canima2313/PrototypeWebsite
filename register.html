@@ -14,18 +14,32 @@
         <h1>Create an Account</h1>
         <form id="regist">
             <div class="container">
-                <img src="" alt="preview" id="preview" style="display:none; width:200px; margin-top:10px;">
-                <input type="file" accept="image/*" onchange="previewImg(event)">
+                <div class="img-container">
+                    <img src="./assets/2662192176.png" alt="pfp" id="file-pic">
+                    <label for="input-file">Upload image</label>
+                    <input id="input-file" type="file" accept="image/jpeg, image/png, image/jpeg">
+                </div>
+                <p id="p1"></p>
             </div>
             <div class="inputs">
-                <input id="name" type="text" placeholder="Full name">
-                <input id="email"type="text" placeholder="YourEmail@example.com">
-                <input id="age"  type="text" placeholder="Your age">
-                <input id="pass" type="text" placeholder="Password">
-                <input id="conf" type="text" placeholder="Confirm password">
+                <input id="name" type="text" placeholder="Full name" class="text">
+                <p id="e1"></p>
+                <input id="email"type="text" placeholder="YourEmail@example.com" class="text">
+                <p id="e2"></p>
+                <input id="age"  type="text" placeholder="Your age" class="text">
+                <p id="e3"></p>
+                <input id="pass" type="password" placeholder="Password" class="text">
+                <p id="e4"></p>
+                <input id="conf" type="password" placeholder="Confirm password" class="text">
+                <p id="e5"></p>
+                <div class="cb">
+                    <input type="checkbox" id="toggle-pass">
+                    <label for="toggle-pass">Show password</label>
+                </div>
                 <button type="submit">Create Account</button>
             </div>
-        </form> 
+        </form>
+        <span>Already have an account?<a href="./login.html">Log in</a></span> 
     </section>
 
     <footer id="footer"></footer>

@@ -10,11 +10,31 @@
 <body>
     <div id="nav"></div>
 
-    
+    <section class="user-form">
+        <h1>Welcome Back</h1>
+        <form id="login">
+            <div class="inputs">
+                <input id="email"type="text" placeholder="YourEmail@example.com" class="text">
+                <p id="e2"></p>
+                <input id="pass" type="password" placeholder="Password" class="text">
+                <p id="e4"></p>
+                <div class="cb">
+                    <input type="checkbox" id="toggle-pass">
+                    <label for="toggle-pass">Show password</label>
+                </div>
+                <button type="submit">Create Account</button>
+            </div>
+        </form>
+        <span>Don't have an account yet?<a href="./register.html">Register</a></span> 
+    </section>
+
+    <footer id="footer"></footer>
 
     <script src="./javascript/components.js"></script>
     <script>
         renderNavbar();
+        renderFooter();
     </script>
+    <script src="./javascript/login.js"></script>
 </body>
 </html>
