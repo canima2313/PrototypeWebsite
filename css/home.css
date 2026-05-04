@@ -82,8 +82,6 @@ h1{
 }
 
 #carousel{
-    height: 100vh;
-    width: 100vw;
     padding: 1rem 0 1rem 0;
     border-radius: 3rem 3rem 0 0;
     background-color: var(--tert-color);

@@ -1,5 +1,17 @@
-
 function renderNavbar(){
+    const loggedIn = localStorage.getItem("currentUser") !== null;
+    const desktopLinks = loggedIn
+        ? `<a class="auth-link" href="#" id="logout-btn">Logout</a>
+           <button class="auth-link deskBtn profile-btn">Profile</button>`
+        : `<a class="auth-link" href="./login.html">Login</a>
+           <a class="auth-link" href="./register.html">Register</a>`;
+
+    const dropdownLinks = loggedIn
+        ? `<button class="auth-link mobileBtn profile-btn">Profile</button>
+           <a href="#" id="logout-btn-mobile">Logout</a>`
+        : `<a href="./login.html">Login</a>
+           <a href="./register.html">Register</a>`;
+
     document.getElementById('nav').innerHTML = `
         <header class="navbar">
             <div class="left">
@@ -14,18 +26,30 @@ function renderNavbar(){
                 <a href="./aboutUs.html">About us</a>
             </span>
             <span class="right">
-                <a class="auth-link" href="./login.html">Login</a>
-                <a class="auth-link" href="./register.html">Register</a>
+                ${desktopLinks}
                 <button class="hamburger" id="hamburger" aria-label="Open menu">
                     <span></span><span></span><span></span>
                 </button>
             </span>
         </header>
         <div class="auth-dropdown" id="authDropdown">
-            <a href="./login.html">Login</a>
-            <a href="./register.html">Register</a>
+            ${dropdownLinks}
+        </div>
+        <div class="auth-dropdown" id="profileDropdown">
+            <a href="viewProfile.html">View profile</a>
+            <a>Edit profile</a>
+            <a>My product</a>
         </div>
     `;
+
+    const profileDropdown = document.getElementById('profileDropdown');
+    document.querySelectorAll('.profile-btn').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            profileDropdown.classList.toggle('open');
+        });
+    });
+    
 
     const ham = document.getElementById('hamburger');
     const drop = document.getElementById('authDropdown');
@@ -33,7 +57,22 @@ function renderNavbar(){
         e.stopPropagation();
         drop.classList.toggle('open');
     });
-    document.addEventListener('click', () => drop.classList.remove('open'));
+    document.addEventListener('click', () => {
+        drop.classList.remove('open');
+        profileDropdown.classList.remove('open');
+    });
+
+    if (loggedIn) {
+        const logout = document.getElementById('logout-btn');
+        const logoutMobile = document.getElementById('logout-btn-mobile');
+        const handleLogout = (e) => {
+            e.preventDefault();
+            localStorage.removeItem("currentUser");
+            window.location.href = "./home.html";
+        };
+        if (logout) logout.addEventListener('click', handleLogout);
+        if (logoutMobile) logoutMobile.addEventListener('click', handleLogout);
+    }
 }
 
 function renderFooter(){

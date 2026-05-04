@@ -18,6 +18,23 @@ pass_toggle.addEventListener('click', () => {
     }
 })
 
-form_input.addEventListener('click', () => {
-    
+form_input.addEventListener('submit', () => {
+    let valid = true;
+    const users = JSON.parse(localStorage.getItem("users")) || [];
+    const foundUser = users.find(user => user.email === email_input.value.trim());
+
+    if (!foundUser){
+        valid = false;
+        error2.textContent = "User does not exist";
+    }
+    else if (foundUser.password !== pass_input.value.trim()) { 
+        valid = false;
+        error4.textContent = "Wrong password";
+    }
+
+    if (valid === true){
+        alert("login success");
+        localStorage.setItem("currentUser", JSON.stringify(foundUser));
+        window.location.href = "./home.html";
+    }
 })
