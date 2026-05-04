@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mOGu</title>
+    <link rel="stylesheet" href="./css/components.css">
+    <link rel="stylesheet" href="./css/register.css">
+</head>
+<body>
+    <div id="nav"></div>
+
+    <section class="user-form">
+        <h1>Update Info</h1>
+        <form id="regist">
+            <div class="container">
+                <div class="img-container">
+                    <img src="./assets/2662192176.png" alt="pfp" id="file-pic">
+                    <label for="input-file">Upload image</label>
+                    <input id="input-file" type="file" accept="image/jpeg, image/png, image/jpeg">
+                </div>
+                <p id="p1"></p>
+            </div>
+            <div class="inputs">
+                <input id="name" type="text" placeholder="Full name" class="text">
+                <p id="e1"></p>
+                <input id="email"type="text" placeholder="YourEmail@example.com" class="text">
+                <p id="e2"></p>
+                <input id="age"  type="text" placeholder="Your age" class="text">
+                <p id="e3"></p>
+                <input id="pass" type="password" placeholder="Password" class="text">
+                <p id="e4"></p>
+                <input id="conf" type="password" placeholder="Confirm password" class="text">
+                <p id="e5"></p>
+                <div class="cb">
+                    <input type="checkbox" id="toggle-pass">
+                    <label for="toggle-pass">Show password</label>
+                </div>
+                <button type="submit">Create Account</button>
+            </div>
+        </form>
+    </section>
+
+    <footer id="footer"></footer>
+    
+    <script src="./javascript/components.js"></script>
+    <script src="./javascript/register.js"></script>
+    <script>
+        renderNavbar();
+        renderFooter();
+    </script>
+</body>
+</html>

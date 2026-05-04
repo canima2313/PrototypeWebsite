@@ -31,6 +31,28 @@ pic_input.onchange = function(){
     pfp.src = URL.createObjectURL(pic_input.files[0]);
 }
 
+function checkPass(pass){
+    let i = 0;
+    let character;
+    let upper = false;
+    let lower = false;
+    let number = false;
+    while (i <= pass.length) {
+        character = pass.charCodeAt(i);
+        if (character >= 65 && character <= 90){
+            upper = true;
+        }
+        else if (character >= 97 && character <= 122){
+            lower = true;
+        }
+        else{
+            number = true;
+        }
+    }
+    if (number && upper && lower) return true;
+    else return false;
+}
+
 function saveUser(users){
     const file = pic_input.files[0];
     console.log("file:", file); // add this
@@ -55,7 +77,7 @@ function saveUser(users){
             email: email_input.value.trim(),
             age: age_input.value.trim(),
             password: pass_input.value.trim(),
-            profilePic: "2662192176.png"
+            profilePic: "./assets/2662192176.png"
         };
         users.push(userData);
         localStorage.setItem('users', JSON.stringify(users));

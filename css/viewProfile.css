@@ -12,3 +12,65 @@ html, body{
     margin: 0;
     padding: 0;
 }
+
+.container{
+    display: flex;
+    flex-direction: column;
+    padding: 4vw;
+    border-radius: 2vw;
+    margin: 20vh;
+    background-color: var(--sec-color);
+    font-size: 2vw;
+}
+.container img{
+    width: 15vw;
+    height: 15vw;
+    object-fit: cover;
+    border-radius: 50%;
+}
+.inner-container{
+    display: flex;
+}
+.text{
+    margin: 2vw;
+}
+.text h4{
+    margin-top: -4vh;
+    opacity: 0.6;
+}
+.card-container{
+    display: flex;
+    justify-content: center;
+}
+.card{
+    width: 40%;
+    height: 15vh;
+    background-color: var(--tert-color);
+    border-radius: 1vw;
+    margin: 1vw;
+    text-align: center;
+}
+.top{
+    font-size: 1vw;
+}
+.cb{
+    display: flex;
+    margin: 1vh 2vw 1vh;
+    font-size: 1.1vw;
+}
+.cb input{
+    width: 1vw;
+    margin-right: 1vw;
+}
+section a{
+    color: var(--tert-color);
+}
+.products{
+    display: flex;
+    flex-direction: column;
+    padding: 4vw;
+    border-radius: 2vw;
+    margin: 0 20vh 20vh 20vh;
+    background-color: var(--sec-color);
+    font-size: 2vw;
+}

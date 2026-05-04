@@ -98,7 +98,7 @@
 .auth-dropdown {
     display: none;
     position: fixed;
-    top: 4.5rem;
+    top: 6rem;
     right: 5vw;
     background-color: var(--sec-color);
     border-radius: 1rem;

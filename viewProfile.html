@@ -10,11 +10,43 @@
 <body>
     <div id="nav"></div>
 
+    <section class="user">
+        <div class="container">
+            <div class="inner-container">
+                <div class="img">
+                    <img id="pfp" src="" alt="">
+                </div>
+                <div class="text">
+                    <h1 id="name"></h1>
+                    <h4 id="email"></h4>
+                </div>
+            </div>
+            <div class="card-container">
+                <div class="card">
+                    <p class="top">Age : </p>
+                    <p class="content" id="age"></p>
+                </div>
+                <div class="card">
+                    <p class="top">Password : </p>
+                    <p class="content" id="pass">********</p>
+                    <div class="cb">
+                        <input type="checkbox" id="toggle-pass">
+                        <label for="toggle-pass">Show password</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="products">
+        
+    </section>
+
     <footer id="footer"></footer>
     <script src="./javascript/components.js"></script>
     <script>
         renderNavbar();
         renderFooter();
     </script>
+    <script src="./javascript/viewProfile.js"></script>
 </body>
 </html>
