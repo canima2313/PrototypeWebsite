@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mOGu</title>
+    <link rel="stylesheet" href="./css/components.css">
+    <link rel="stylesheet" href="./css/viewProfile.css">
+</head>
+<body>
+    <div id="nav"></div>
+
+    <section class="products">
+        <button class="add-prod" onclick="addProd()">+ Add product</button>
+        <div class="prod-grid" id="prod-grid"></div>
+    </section>
+
+    <footer id="footer"></footer>
+    <script src="./javascript/components.js"></script>
+    <script>
+        renderNavbar();
+        renderFooter();
+    </script>
+    <script src="./javascript/myProduct.js"></script>
+</body>
+</html>

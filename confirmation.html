@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mOGu - Confirm Purchase</title>
+    <link rel="stylesheet" href="./css/components.css">
+    <link rel="stylesheet" href="./css/confirmation.css">
+</head>
+<body>
+    <div id="nav"></div>
+
+    <section class="confirm-section">
+        <h1>Confirm Your Purchase</h1>
+        <div class="confirm-card">
+            <img id="conf-img" src="" alt="product">
+            <div class="conf-info">
+                <h2 id="conf-name"></h2>
+                <p id="conf-category"></p>
+                <p class="conf-price" id="conf-price"></p>
+                <p id="conf-stock"></p>
+            </div>
+        </div>
+        <div class="confirm-actions">
+            <button id="cancel-btn" class="cancel-btn" onclick="history.back()">Cancel</button>
+            <button id="confirm-btn" class="confirm-btn">Confirm Purchase</button>
+        </div>
+    </section>
+
+    <footer id="footer"></footer>
+    <script src="./javascript/components.js"></script>
+    <script>
+        renderNavbar();
+        renderFooter();
+    </script>
+    <script src="./javascript/confirmation.js"></script>
+</body>
+</html>

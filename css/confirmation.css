@@ -1,0 +1,119 @@
+@import './variables.css';
+
+html, body {
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: background-color 0.3s, color 0.3s;
+    font-family: var(--font-family);
+    margin: 0;
+    padding: 0;
+}
+
+.confirm-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    padding: 12vh 6vw 6vh;
+}
+
+.confirm-section h1 {
+    margin: 0;
+    font-size: 2rem;
+}
+
+.confirm-card {
+    display: flex;
+    gap: 3vw;
+    background-color: var(--sec-color);
+    border-radius: 1.5rem;
+    padding: 2rem 3vw;
+    width: 55%;
+    align-items: center;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+}
+
+.confirm-card img {
+    width: 14vw;
+    height: 20vh;
+    object-fit: cover;
+    border-radius: 1rem;
+}
+
+.conf-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.conf-info h2 {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+.conf-info p {
+    margin: 0;
+    opacity: 0.75;
+    font-size: 0.95rem;
+}
+
+.conf-price {
+    font-size: 1.6rem !important;
+    font-weight: bold;
+    color: var(--tert-color);
+    opacity: 1 !important;
+}
+
+.confirm-actions {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.cancel-btn {
+    padding: 0.9rem 2.5rem;
+    border: 2px solid var(--tert-color);
+    border-radius: 1rem;
+    background: transparent;
+    color: var(--text-color);
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.2s;
+}
+
+.cancel-btn:hover {
+    background-color: rgba(84,122,149,0.2);
+    transform: translateY(-2px);
+}
+
+.cancel-btn:active {
+    transform: translateY(0);
+}
+
+.confirm-btn {
+    padding: 0.9rem 2.5rem;
+    border: none;
+    border-radius: 1rem;
+    background-color: var(--tert-color);
+    color: var(--text-color);
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s;
+}
+
+.confirm-btn:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(84,122,149,0.4);
+    background-color: #4a6d87;
+}
+
+.confirm-btn:active {
+    transform: translateY(0);
+    box-shadow: none;
+    background-color: #3d5c72;
+}

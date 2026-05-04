@@ -38,7 +38,7 @@ function renderNavbar(){
         <div class="auth-dropdown" id="profileDropdown">
             <a href="viewProfile.html">View profile</a>
             <a href="editProfile.html">Edit profile</a>
-            <a>My product</a>
+            <a href="myProduct.html">My product</a>
         </div>
     `;
 

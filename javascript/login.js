@@ -18,7 +18,8 @@ pass_toggle.addEventListener('click', () => {
     }
 })
 
-form_input.addEventListener('submit', () => {
+form_input.addEventListener('submit', (e) => {
+    e.preventDefault();
     let valid = true;
     const users = JSON.parse(localStorage.getItem("users")) || [];
     const foundUser = users.find(user => user.email === email_input.value.trim());

@@ -18,7 +18,7 @@ html, body{
     flex-direction: column;
     padding: 4vw;
     border-radius: 2vw;
-    margin: 20vh;
+    margin: 20vh 20vh 0 20vh;
     background-color: var(--sec-color);
     font-size: 2vw;
 }
@@ -70,7 +70,93 @@ section a{
     flex-direction: column;
     padding: 4vw;
     border-radius: 2vw;
-    margin: 0 20vh 20vh 20vh;
+    margin: 15vh 20vh 20vh 20vh;
     background-color: var(--sec-color);
     font-size: 2vw;
+}.add-prod{
+    background-color: var(--tert-color);
+    width: 20%;
+    height: 7vh;
+    border: none;
+    border-radius: 2vh;
+    color: var(--text-color);
+    font-weight: bold;
+    font-size: 2vh;
+    cursor: pointer;
+    transition: 0.3s ease;
+    margin-bottom: 2vh;
+}
+.add-prod:hover{
+    transform: translateY(-5px);
+}
+.prod-grid{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5vw;
+}
+.product-card{
+    background-color: var(--tert-color);
+    border-radius: 1.2vw;
+    width: calc(25% - 1.5vw);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    transition: transform 0.2s ease;
+}
+.product-card:hover{
+    transform: translateY(-4px);
+}
+.product-card img{
+    width: 100%;
+    height: 18vh;
+    object-fit: cover;
+}
+.prod-info{
+    padding: 0.8rem 1rem 0.4rem;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+}
+.prod-info h3{
+    margin: 0;
+    font-size: 1.1rem;
+}
+.prod-category{
+    font-size: 0.8rem;
+    opacity: 0.6;
+}
+.prod-meta{
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.9rem;
+    font-weight: bold;
+    margin-top: 0.3rem;
+}
+.prod-actions{
+    display: flex;
+    gap: 0.5rem;
+    padding: 0.7rem 1rem;
+}
+.btn-edit, .btn-delete{
+    flex: 1;
+    padding: 0.5rem;
+    border: none;
+    border-radius: 0.6rem;
+    font-weight: bold;
+    font-size: 0.85rem;
+    cursor: pointer;
+    transition: opacity 0.2s ease;
+}
+.btn-edit{
+    background-color: var(--sec-color);
+    color: var(--text-color);
+}
+.btn-delete{
+    background-color: #e05252;
+    color: #fff;
+}
+.btn-edit:hover, .btn-delete:hover{
+    opacity: 0.8;
 }

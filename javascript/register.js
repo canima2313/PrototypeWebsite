@@ -31,32 +31,34 @@ pic_input.onchange = function(){
     pfp.src = URL.createObjectURL(pic_input.files[0]);
 }
 
-function checkPass(pass){
-    let i = 0;
-    let character;
-    let upper = false;
-    let lower = false;
-    let number = false;
-    while (i <= pass.length) {
-        character = pass.charCodeAt(i);
-        if (character >= 65 && character <= 90){
-            upper = true;
-        }
-        else if (character >= 97 && character <= 122){
-            lower = true;
-        }
-        else{
-            number = true;
+function hasUppercase(pass){
+    for (let i = 0; i < pass.length; i++) {
+        if (pass[i] === pass[i].toUpperCase() && pass[i] !== pass[i].toLowerCase()){
+            return true;
         }
     }
-    if (number && upper && lower) return true;
-    else return false;
+    return false;
+}
+function hasLowercase(pass){
+    for (let i = 0; i < pass.length; i++) {
+        if (pass[i] === pass[i].toLowerCase() && pass[i] !== pass[i].toUpperCase()){
+            return true;
+        }
+    }
+    return false;
+}
+function hasNumber(pass){
+    const numbers = "0123456789";
+    for (let i = 0; i < pass.length; i++) {
+        if (numbers.includes(pass[i])) {
+            return true;
+        }
+    }
+    return false;
 }
 
 function saveUser(users){
     const file = pic_input.files[0];
-    console.log("file:", file); // add this
-    console.log("users before save:", users); // add this
     if (file){
         const reader = new FileReader();
         reader.onload = (e) => {
@@ -107,28 +109,21 @@ age_input.addEventListener('keyup', () => {
     }
 });
 pass_input.addEventListener('keyup', () => {
-    if (!/[A-Z]/.test(pass_input.value.trim())) {
+    if (!hasUppercase(pass_input.value.trim())) {
         error4.textContent = "Password must include 1 uppercase letter";
     } else {
         error4.textContent = ""
     }
 });
 pass_input.addEventListener('keyup', () => {
-    if (!/[A-Z]/.test(pass_input.value.trim())) {
-        error4.textContent = "Password must include 1 uppercase letter";
-    } else {
-        error4.textContent = ""
-    }
-});
-pass_input.addEventListener('keyup', () => {
-    if (!/[a-z]/.test(pass_input.value.trim())) {
+    if (!hasLowercase(pass_input.value.trim())) {
         error4.textContent = "Password must include 1 lowercase letter";
     } else {
         error4.textContent = ""
     }
 });
 pass_input.addEventListener('keyup', () => {
-    if (!/[0-9]/.test(pass_input.value.trim())) {
+    if (!hasNumber(pass_input.value.trim())) {
         error4.textContent = "Password must include 1 number";
     } else {
         error4.textContent = ""
@@ -163,15 +158,15 @@ form_input.addEventListener('submit', (e) => {
         valid = false;
         error3.textContent = "You must be at least 18";
     }
-    if (!/[A-Z]/.test(pass_input.value.trim())){
+    if (!hasUppercase(pass_input.value.trim())){
         valid = false;
         error4.textContent = "Password must include 1 uppercase letter";
     }
-    if (!/[a-z]/.test(pass_input.value.trim())){
+    if (!hasLowercase(pass_input.value.trim())){
         valid = false;
         error4.textContent = "Password must include 1 lowercase letter";
     }
-    if (!/[0-9]/.test(pass_input.value.trim())){
+    if (!hasNumber(pass_input.value.trim())){
         valid = false;
         error4.textContent = "Password must include 1 number";
     }

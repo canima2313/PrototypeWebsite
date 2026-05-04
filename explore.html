@@ -3,28 +3,70 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>mOGu</title>
+    <title>mOGu - Explore</title>
     <link rel="stylesheet" href="./css/components.css">
     <link rel="stylesheet" href="./css/explore.css">
 </head>
 <body>
     <div id="nav"></div>
 
-    <section class="searchbar">
-        <input type="text" placeholder="search for an item">
-    </section>
-    <section class="card-container">
-        <div class="card">
-            
-        </div>
+    <section class="search-section">
+        <input type="text" id="search-bar" placeholder="Search for a product...">
     </section>
 
+    <main class="explore-main">
+        <aside class="filters">
+            <h3>Filters</h3>
+            <div class="filter-group">
+                <label>Category</label>
+                <select id="filter-category">
+                    <option value="">All</option>
+                    <option value="Electronics">Electronics</option>
+                    <option value="Home & kitchen">Home & kitchen</option>
+                    <option value="Clothing">Clothing</option>
+                    <option value="Shoes & jewelry">Shoes & jewelry</option>
+                    <option value="Beauty & personal care">Beauty & personal care</option>
+                    <option value="Sports & outdoors">Sports & outdoors</option>
+                </select>
+            </div>
+            <div class="filter-group">
+                <label>Price Range</label>
+                <div class="range-inputs">
+                    <input type="number" id="price-min" placeholder="Min" min="0">
+                    <span>—</span>
+                    <input type="number" id="price-max" placeholder="Max" min="0">
+                </div>
+            </div>
+            <div class="filter-group">
+                <label>Min Sold</label>
+                <input type="number" id="min-sold" placeholder="0" min="0">
+            </div>
+            <div class="filter-group">
+                <label>Min Rating</label>
+                <div class="star-filter" id="star-filter">
+                    <span class="star" data-val="1">★</span>
+                    <span class="star" data-val="2">★</span>
+                    <span class="star" data-val="3">★</span>
+                    <span class="star" data-val="4">★</span>
+                    <span class="star" data-val="5">★</span>
+                </div>
+                <span id="rating-label">Any</span>
+            </div>
+            <button class="btn-clear" id="btn-clear">Clear Filters</button>
+        </aside>
+
+        <div class="results-area">
+            <div class="prod-grid" id="prod-grid"></div>
+            <div class="pagination" id="pagination"></div>
+        </div>
+    </main>
+
     <footer id="footer"></footer>
-    
     <script src="./javascript/components.js"></script>
     <script>
         renderNavbar();
         renderFooter();
     </script>
+    <script src="./javascript/explore.js"></script>
 </body>
 </html>

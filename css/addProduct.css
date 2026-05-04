@@ -62,15 +62,15 @@ form .container{
     justify-content: end;
     margin: 0;
     width: 90%;
-    height: 95%;
+    height: 66vh;
     border: 2px dotted var(--text-color);
     border-radius: 2rem;
 }
 .img-container img{
-    width: 40vh;
-    height: 40vh;
+    width: 90%;
+    height: 75%;
     object-fit: cover;
-    border-radius: 50%;
+    border-radius: 1vw;
 }
 form .inputs{
     display: flex;
@@ -97,11 +97,20 @@ form .text{
 form select{
     margin: 0.5rem;
     font-size: 1.2rem;
-    padding: 4vh;
+    padding: 1rem;
     width: 92%;
-    height: 0;
     border: 2px solid grey;
     border-radius: 1.2rem;
+}
+form textarea{
+    margin: 0.5rem;
+    font-size: 1.2rem;
+    padding: 1rem;
+    width: 86%;
+    height: 12rem;
+    border: 2px solid grey;
+    border-radius: 1.2rem;
+    resize: vertical;
 }
 form button{
     cursor: pointer;
@@ -112,22 +121,10 @@ form button{
     background-color: var(--tert-color);
     margin: 0.5rem;
     min-height: 3rem;
-    width: 88%;
+    width: 92%;
     border-radius: 1.2rem;
     transition: scale 0.3s ease;
 }
 form button:hover{
     scale: 1.1;
-}
-.cb{
-    display: flex;
-    margin: 1vh 2vw 1vh;
-    font-size: 1.1vw;
-}
-.cb input{
-    width: 1vw;
-    margin-right: 1vw;
-}
-section a{
-    color: var(--tert-color);
 }

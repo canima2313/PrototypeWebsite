@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mOGu</title>
+    <link rel="stylesheet" href="./css/components.css">
+    <link rel="stylesheet" href="./css/addProduct.css">
+</head>
+<body>
+    <div id="nav"></div>
+
+    <section class="user-form">
+        <h1>Add a product</h1>
+        <form id="product">
+            <div class="container">
+                <div class="img-container">
+                    <img src="./assets/2662192176.png" alt="" id="file-pic">
+                    <label for="input-file">Upload image</label>
+                    <input id="input-file" type="file" accept="image/jpeg, image/png, image/jpeg">
+                </div>
+                <p id="p1"></p>
+            </div>
+            <div class="inputs">
+                <input id="name" type="text" placeholder="Product name" class="text">
+                <p id="e1"></p>
+                <select name="Category" id="category">
+                    <option disabled selected value=" ">Pick a category</option>
+                    <option value="Electronics">Electronics</option>
+                    <option value="Home & kitchen">Home & kitchen</option>
+                    <option value="Clothing">Clothing</option>
+                    <option value="Shoes & jewelry">Shoes & jewelry</option>
+                    <option value="Beauty & personal care">Beauty & personal care</option>
+                    <option value="Sports & outdoors">Sports & outdoors</option>
+                </select>
+                <p id="e2"></p>
+                <input id="stock"type="text" placeholder="Quantity" class="text">
+                <p id="e3"></p>
+                <input id="price"type="text" placeholder="Price" class="text">
+                <p id="e4"></p>
+                <textarea name="desc" id="desc"></textarea>
+                <button type="submit">Add product</button>
+            </div>
+        </form> 
+    </section>
+
+    <footer id="footer"></footer>
+    
+    <script src="./javascript/components.js"></script>
+    <script src="./javascript/addProduct.js"></script>
+    <script>
+        renderNavbar();
+        renderFooter();
+    </script>
+</body>
+</html>

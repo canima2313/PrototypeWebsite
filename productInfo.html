@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mOGu - Product</title>
+    <link rel="stylesheet" href="./css/components.css">
+    <link rel="stylesheet" href="./css/productInfo.css">
+</head>
+<body>
+    <div id="nav"></div>
+
+    <section class="info-section">
+        <div class="info-left">
+            <img id="prod-img" src="" alt="product">
+        </div>
+        <div class="info-right">
+            <h1 id="prod-name"></h1>
+            <div id="prod-rating" class="prod-rating"></div>
+            <div class="prod-meta">
+                <span id="prod-sold"></span>
+                <span class="meta-dot">·</span>
+                <span id="prod-stock"></span>
+            </div>
+            <p class="prod-price" id="prod-price"></p>
+            <p class="prod-desc" id="prod-desc"></p>
+
+            <button id="seller-btn" class="seller-btn">
+                <img class="seller-pic" src="" alt="seller">
+                <div class="seller-text">
+                    <span class="seller-name"></span>
+                    <span class="seller-count"></span>
+                </div>
+                <span class="seller-arrow">›</span>
+            </button>
+
+            <button id="buy-btn" class="buy-btn">Buy Now</button>
+        </div>
+    </section>
+
+    <section class="review-section">
+        <h2>Reviews</h2>
+        <div class="star-filters">
+            <button class="star-filter-btn active" data-val="0">All</button>
+            <button class="star-filter-btn" data-val="1">1 ★</button>
+            <button class="star-filter-btn" data-val="2">2 ★</button>
+            <button class="star-filter-btn" data-val="3">3 ★</button>
+            <button class="star-filter-btn" data-val="4">4 ★</button>
+            <button class="star-filter-btn" data-val="5">5 ★</button>
+        </div>
+        <div id="reviews-list"></div>
+
+        <div id="review-form" class="review-form">
+            <h3>Leave a Review</h3>
+            <select id="review-rating">
+                <option value="1">1 ★</option>
+                <option value="2">2 ★★</option>
+                <option value="3">3 ★★★</option>
+                <option value="4">4 ★★★★</option>
+                <option value="5" selected>5 ★★★★★</option>
+            </select>
+            <textarea id="review-text" placeholder="Write your review..."></textarea>
+            <button id="submit-review" class="submit-review-btn">Submit Review</button>
+        </div>
+    </section>
+
+    <section class="rec-section">
+        <h2>You May Also Like</h2>
+        <div class="rec-grid" id="rec-grid"></div>
+    </section>
+
+    <footer id="footer"></footer>
+    <script src="./javascript/components.js"></script>
+    <script>
+        renderNavbar();
+        renderFooter();
+    </script>
+    <script src="./javascript/productInfo.js"></script>
+</body>
+</html>
